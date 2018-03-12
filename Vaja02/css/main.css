@@ -1,0 +1,117 @@
+@charset "UTF-8";
+h1, h2, h3, h4 {
+  font-family: "Roboto Slab", serif; }
+
+ul, li {
+  font-family: "Roboto", sans-serif; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.618;
+  font-size: 1rem;
+  margin: 0.5em 0; }
+  p > strong {
+    color: #707070; }
+
+#main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
+  #main-nav .logo-container {
+    width: 210px;
+    height: 210px;
+    display: block; }
+    #main-nav .logo-container > a {
+      display: block; }
+  #main-nav .menu-items > a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "Roboto Slab", serif;
+    color: #4C484F;
+    font-weight: 700;
+    padding: 0.5em;
+    transition: 200ms ease-in-out all; }
+    @media screen and (max-width: 768px) {
+      #main-nav .menu-items > a {
+        font-size: 1.2rem; } }
+    #main-nav .menu-items > a:hover {
+      color: #5DC2BA; }
+    #main-nav .menu-items > a.active {
+      color: #5DC2BA; }
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16); }
+  .container img {
+    max-width: 100%;
+    width: 100%;
+    height: auto; }
+
+footer.container {
+  background: none;
+  box-shadow: none;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end; }
+
+article.post {
+  padding: 2em 5em; }
+  @media screen and (max-width: 768px) {
+    article.post {
+      padding: 1.5rem; } }
+  article.post .post-title {
+    margin-top: 0;
+    font-size: 2.5rem;
+    font-family: "Roboto Slab", serif;
+    color: #707070;
+    line-height: 1.2;
+    margin-bottom: 0.5em; }
+  article.post .post-subtitle {
+    margin: 1.5em 0 0.5em;
+    font-size: 2rem;
+    color: #707070; }
+  article.post p.intro {
+    font-size: 1.1rem;
+    font-family: "Roboto Slab", serif;
+    font-style: italic; }
+    article.post p.intro::before, article.post p.intro::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #e6e6e6; }
+    article.post p.intro::before {
+      margin-bottom: 1.5em; }
+    article.post p.intro::after {
+      margin-top: 1.5em; }
+  article.post ul.post-custom-list {
+    padding: 0; }
+    article.post ul.post-custom-list > li {
+      list-style: none;
+      padding: 0.8em 0;
+      padding-left: 1em;
+      border-bottom: solid 1px #e6e6e6;
+      margin: 0;
+      line-height: 1.5em;
+      position: relative; }
+      article.post ul.post-custom-list > li:last-child {
+        border: none; }
+      article.post ul.post-custom-list > li::before {
+        content: "•";
+        color: #5DC2BA;
+        position: absolute;
+        top: 0.8em;
+        left: 0px; }
+
+body {
+  background-image: url("../img/debut_light.png");
+  background-repeat: repeat; }
+
+/*# sourceMappingURL=main.css.map */

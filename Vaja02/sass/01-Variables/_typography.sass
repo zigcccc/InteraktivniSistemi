@@ -1,0 +1,41 @@
+$mainfont: 'Roboto', sans-serif
+$headingfont: 'Roboto Slab', serif
+
+=menuItem()
+  font-size: 1.4rem
+  font-family: $headingfont
+  color: $dark
+  font-weight: 700
+  padding: 0.5em
+  @media screen and (max-width: 768px)
+    font-size: 1.2rem
+
+=postTitle()
+  font-size: 2.5rem
+  font-family: $headingfont
+  color: $light-gray
+  line-height: 1.2
+  margin-bottom: 0.5em
+
+=postSubtitle()
+  font-size: 2rem
+  color: $light-gray
+
+=introParagraph()
+  font-size: 1.1rem
+  font-family: $headingfont
+  font-style: italic
+
+h1, h2, h3, h4
+  font-family: $headingfont
+
+ul, li
+  font-family: $mainfont
+
+p
+  font-family: $mainfont
+  line-height: 1.618
+  font-size: 1rem
+  margin: 0.5em 0
+  & > strong
+    color: $light-gray
