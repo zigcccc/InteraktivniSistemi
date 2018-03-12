@@ -1,0 +1,22 @@
+#main-nav
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 2rem
+  max-width: 900px
+  margin-left: auto
+  margin-right: auto
+  .logo-container
+    +getSquare(210px)
+    display: block
+    & > a
+      display: block
+  .menu-items
+    & > a
+      text-decoration: none
+      +menuItem()
+      transition: $main-transition
+      &:hover
+        color: $maincolor
+      &.active
+        color: $maincolor
