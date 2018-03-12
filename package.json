@@ -4,7 +4,8 @@
   "description": "local dev env package",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch Vaja02/sass:Vaja02/css"
   },
   "author": "Ziga Krasove",
   "license": "MIT",
