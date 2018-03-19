@@ -1,14 +1,15 @@
-const ParallaxContent = (article) => {
+const ParallaxContent = (article, nav) => {
   let windowOffset = window.scrollY
   let articleOffset = article.offsetTop
   if (articleOffset - windowOffset > 0) {
-    article.style = `margin-top: -${windowOffset}px`
+    nav.style = `transform: translateY(${windowOffset / 2}px)`
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const article = document.querySelector('main')
+  const nav = document.getElementById('main-nav')
   window.addEventListener('scroll', e => {
-    ParallaxContent(article)
+    ParallaxContent(article, nav)
   })
 })

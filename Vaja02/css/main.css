@@ -35,6 +35,8 @@ p {
     font-weight: 700;
     padding: 0.5em;
     transition: 200ms ease-in-out all; }
+    #main-nav .menu-items > a.active {
+      color: #5DC2BA; }
     @media screen and (max-width: 768px) {
       #main-nav .menu-items > a {
         font-size: 1.2rem; } }
@@ -48,7 +50,8 @@ p {
   max-width: 900px;
   margin: 0 auto;
   background: #ffffff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16); }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+  position: relative; }
   .container img {
     max-width: 100%;
     width: 100%;
