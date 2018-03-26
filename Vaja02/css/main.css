@@ -113,6 +113,109 @@ article.post {
         top: 0.8em;
         left: 0px; }
 
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+  background-color: #ffffff;
+  transform: translateY(-100%);
+  transition: 200ms ease-in-out all; }
+  #overlay.is-active {
+    transform: translateY(0); }
+  #overlay #close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    z-index: 100; }
+    #overlay #close-btn > span {
+      width: 100%;
+      position: relative;
+      top: 50%;
+      height: 3px;
+      display: block;
+      background: #4C484F;
+      transform-origin: 45%; }
+      #overlay #close-btn > span:first-child {
+        transform: rotate(45deg); }
+      #overlay #close-btn > span:last-child {
+        transform: rotate(-45deg); }
+    #overlay #close-btn:hover {
+      cursor: pointer; }
+  #overlay .overlay-container {
+    width: 90%;
+    max-width: 500px; }
+    #overlay .overlay-container > img {
+      width: 250px;
+      display: block;
+      margin: 0 auto; }
+    #overlay .overlay-container .overlay-title {
+      font-size: 2.5rem;
+      font-family: "Roboto Slab", serif;
+      color: #707070;
+      line-height: 1.2;
+      margin-bottom: 0.5em;
+      text-align: center;
+      font-size: 2em;
+      margin: 0 0 1em; }
+    #overlay .overlay-container .lead-text {
+      font-size: 1.1rem;
+      font-family: "Roboto Slab", serif;
+      font-style: italic;
+      text-align: center;
+      font-size: 1em;
+      margin-top: 0;
+      margin-bottom: 2em; }
+    #overlay .overlay-container form {
+      display: flex;
+      justify-content: center; }
+      @media screen and (max-width: 768px) {
+        #overlay .overlay-container form {
+          flex-direction: column;
+          align-items: center; } }
+      #overlay .overlay-container form input[type="email"] {
+        outline: none;
+        border: none;
+        flex: 1;
+        margin-right: 2em;
+        padding: 0.25em 0.5em;
+        border-bottom: 3px solid #5DC2BA; }
+        @media screen and (max-width: 768px) {
+          #overlay .overlay-container form input[type="email"] {
+            width: 90%;
+            margin-right: 0; } }
+      #overlay .overlay-container form input[type="submit"] {
+        outline: none;
+        border: none;
+        background: #5DC2BA;
+        color: #ffffff;
+        font-weight: bold;
+        min-width: 150px;
+        padding: 0.75em 1em;
+        border-radius: 200px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+        transition: 200ms ease-in-out all; }
+        @media screen and (max-width: 768px) {
+          #overlay .overlay-container form input[type="submit"] {
+            margin-top: 1em; } }
+        #overlay .overlay-container form input[type="submit"]:hover {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21);
+          transform: translateY(-3px); }
+    #overlay .overlay-container small {
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      margin-top: 3em; }
+      #overlay .overlay-container small:hover {
+        cursor: pointer; }
+
 body {
   background-image: url("../img/debut_light.png");
   background-repeat: repeat; }

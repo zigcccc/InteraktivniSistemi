@@ -1,0 +1,99 @@
+#overlay
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: center
+  background-color: $white
+  transform: translateY(-100%)
+  transition: $main-transition
+  &.is-active
+    transform: translateY(0)
+
+  #close-btn
+    position: absolute
+    top: 20px
+    right: 20px
+    +getSquare(30px)
+    z-index: 100
+    & > span
+      width: 100%
+      position: relative
+      top: 50%
+      height: 3px
+      display: block
+      background: $dark
+      transform-origin: 45%
+      &:first-child
+        transform: rotate(45deg)
+      &:last-child
+        transform: rotate(-45deg)
+    &:hover
+      cursor: pointer
+
+  .overlay-container
+    width: 90%
+    max-width: 500px
+
+    & > img
+      width: 250px
+      display: block
+      margin: 0 auto
+
+    .overlay-title
+      +postTitle()
+      text-align: center
+      font-size: 2em
+      margin: 0 0 1em
+
+    .lead-text
+      +introParagraph()
+      text-align: center
+      font-size: 1em
+      margin-top: 0
+      margin-bottom: 2em
+
+    form
+      display: flex
+      justify-content: center
+      @media screen and (max-width: 768px)
+        flex-direction: column
+        align-items: center
+      input[type="email"]
+        outline: none
+        border: none
+        flex: 1
+        margin-right: 2em
+        padding: 0.25em 0.5em
+        border-bottom: 3px solid $maincolor
+        @media screen and (max-width: 768px)
+          width: 90%
+          margin-right: 0
+      input[type="submit"]
+        outline: none
+        border: none
+        background: $maincolor
+        color: $white
+        font-weight: bold
+        min-width: 150px
+        padding: 0.75em 1em
+        border-radius: 200px
+        box-shadow: $main-shadow
+        transition: $main-transition
+        @media screen and (max-width: 768px)
+          margin-top: 1em
+        &:hover
+          box-shadow: $hover-shadow
+          transform: translateY(-3px)
+
+    small
+      text-transform: uppercase
+      text-align: center
+      display: block
+      margin-top: 3em
+      &:hover
+        cursor: pointer
