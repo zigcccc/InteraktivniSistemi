@@ -216,6 +216,30 @@ article.post {
       #overlay .overlay-container small:hover {
         cursor: pointer; }
 
+table {
+  width: 100%; }
+
+td {
+  padding: 0.8em 0.5em; }
+
+thead {
+  background-color: #5DC2BA;
+  color: #fff; }
+
+tbody tr:nth-child(even),
+thead tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05); }
+tbody tr:hover,
+thead tr:hover {
+  background-color: #5DC2BA;
+  color: #fff; }
+tbody td:nth-child(1),
+thead td:nth-child(1) {
+  font-weight: 700; }
+tbody td:nth-child(2),
+thead td:nth-child(2) {
+  text-align: right; }
+
 body {
   background-image: url("../img/debut_light.png");
   background-repeat: repeat; }
