@@ -64,6 +64,11 @@ footer.container {
   display: flex;
   justify-content: flex-end; }
 
+.homepage .container {
+  background: unset;
+  box-shadow: unset;
+  max-width: unset; }
+
 article.post {
   padding: 2em 5em; }
   @media screen and (max-width: 768px) {
@@ -232,6 +237,74 @@ table {
     font-weight: 700; }
   table tbody td:nth-child(2), table thead td:nth-child(2) {
     text-align: right; }
+
+.homepage .page-title {
+  margin-top: 1.5em;
+  font-size: 2.5rem;
+  font-family: "Roboto Slab", serif;
+  color: #707070;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  text-align: center; }
+.homepage .page-intro {
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3em; }
+.homepage .posts-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .homepage .posts-list > article {
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+    flex: 0 0 100%;
+    margin-bottom: 5%;
+    position: relative; }
+    @media screen and (min-width: 1024px) {
+      .homepage .posts-list > article {
+        flex: 0 0 calc(50% - 5%);
+        margin: 0 1em 2.5%;
+        display: flex; }
+        .homepage .posts-list > article figure {
+          display: flex;
+          height: 100%;
+          min-width: 30%; }
+          .homepage .posts-list > article figure > img {
+            object-fit: cover; } }
+    .homepage .posts-list > article .article-content {
+      padding: 1em 2em; }
+      .homepage .posts-list > article .article-content h3 {
+        font-size: 2.5rem;
+        font-family: "Roboto Slab", serif;
+        color: #707070;
+        line-height: 1.2;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+        font-size: 2rem; }
+      .homepage .posts-list > article .article-content p {
+        padding-bottom: 4em; }
+      .homepage .posts-list > article .article-content .cta-container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0.5em 0;
+        position: absolute;
+        bottom: 10px;
+        right: 2em; }
+        .homepage .posts-list > article .article-content .cta-container a {
+          background: #5DC2BA;
+          color: #ffffff;
+          padding: 0.75em 1em;
+          text-decoration: none;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+          transition: 200ms ease-in-out all;
+          display: inline-block;
+          font-weight: 700; }
+          .homepage .posts-list > article .article-content .cta-container a:hover {
+            background: #095256;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.21); }
 
 body {
   background-image: url("../img/debut_light.png");
