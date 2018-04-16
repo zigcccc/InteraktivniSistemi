@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Woody Nature – Adrenalinska doživetja – Rafting</title>
+  <!-- Add CSS -->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Roboto:300,300i,700&subset=latin-ext">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="page-rafting" class="subpage">
+  <nav id="main-nav" class="menu">
+    <div class="logo-container">
+      <a href="/">
+        <img src="./img/logo.svg" alt="Woody Nature">
+      </a>
+    </div>
+    <div class="menu-items">
+      <a href="/aktivnosti.html">Aktivnosti</a>
+      <a href="/cenik.html">Cenik</a>
+      <a class="active" href="/rezervacija.html">Rezervacija</a>
+    </div>
+  </nav>
+  <main class="container">
+    <article class="post">
+      <h1 class="post-title">Rezervacija</h1>
+      <form method="POST" action="/" class="reservation-form">
+        <p>
+          <input id="name" type="text" name="name" required="">
+          <label for="name">Ime in priimek*</label>
+        </p>
+        <p>
+          <input id="address" type="text" name="address" required="">
+          <label for="address">Naslov*</label>
+        </p>
+        <p>
+          <input id="email" type="email" name="email" required="">
+          <label for="email">Email*</label>
+        </p>
+        <p>
+          <input id="phone" type="tel" name="phone" required="">
+          <label for="phone">Telefonska številka*</label>
+        </p>
+        <p>
+          <input id="date" type="date" name="date" required="">
+          <label for="date">Datum*</label>
+        </p>
+        <p>
+          <input id="time" type="time" name="time" required="">
+          <label for="time">Čas*</label>
+        </p>
+        <p>
+          <select id="aktivnost" name="aktivnost" required="">
+            <option default selected value="rafting">Rafting</option>
+            <option value="canyoning">Canyoning</option>
+            <option value="kajak">Kajak</option>
+            <option value="plezanje">Plezanje</option>
+          </select>
+          <label>Aktivnost*</label>
+        </p>
+        <p>
+          <input id="stevilo" type="number" name="stevilo" min="1" max="10" required="">
+          <label for="stevilo">Število oseb*</label>
+        </p>
+        <p>
+          <textarea id="opombe" rows="4"></textarea>
+          <label for="opombe">Dodatne želje</label>
+        </p>
+        <p>
+          <label class="checkbox-container">Želim zavarovanje
+            <input type="checkbox" name="zavarovanje" value="zavarovanje" checked="">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+        </p>
+        <p class="full-width">
+          <input type="submit" value="Rezerviraj">
+        </p>
+      </form>
+    </article>
+  </main>
+  <section id="overlay" class="overlay">
+    <div id="close-btn" class="close-overlay">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="overlay-container">
+      <img src="./img/logo.svg" alt="Woody Nature">
+      <h2 class="overlay-title">Vas zanima še več o reki Soči?</h2>
+      <p class="lead-text">Vnesite svoj epoštni naslov in se naročite na naše enovice ter na ta način ostanite na tekočem z aktualno vsebino.</p>
+      <div class="form-container">
+        <form action="">
+          <input type="email" name="email">
+          <input type="submit" value="Naroči se">
+        </form>
+      </div>
+      <small class="close-overlay">Zapri</small>
+    </div>
+  </section>
+  <footer class="container">
+    <small>&copy; Woody Nature 2018</small>
+  </footer>
+  <script defer src="./js/main.js"></script>
+</body>
+
+</html>

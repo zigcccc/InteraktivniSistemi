@@ -34,7 +34,7 @@ p {
     color: #4C484F;
     font-weight: 700;
     padding: 0.5em;
-    transition: 200ms ease-in-out all; }
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     #main-nav .menu-items > a.active {
       color: #5DC2BA; }
     @media screen and (max-width: 768px) {
@@ -130,7 +130,7 @@ article.post {
   flex-direction: center;
   background-color: #ffffff;
   transform: translateY(-100%);
-  transition: 200ms ease-in-out all; }
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   #overlay.is-active {
     transform: translateY(0); }
   #overlay #close-btn {
@@ -206,7 +206,7 @@ article.post {
         padding: 0.75em 1em;
         border-radius: 200px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-        transition: 200ms ease-in-out all; }
+        transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
         @media screen and (max-width: 768px) {
           #overlay .overlay-container form input[type="submit"] {
             margin-top: 1em; } }
@@ -238,6 +238,96 @@ table {
   table tbody td:nth-child(2), table thead td:nth-child(2) {
     text-align: right; }
 
+@media screen and (min-width: 600px) {
+  .reservation-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .reservation-form p {
+      width: 45%; } }
+.reservation-form input:not([type="checkbox"]),
+.reservation-form select,
+.reservation-form textarea {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 0.3em 0;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 1.1em;
+  background-color: transparent;
+  border-radius: 0; }
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #5DC2BA; }
+.reservation-form label {
+  font-size: 0.8em; }
+.reservation-form input[type="submit"] {
+  background-color: #5DC2BA;
+  color: #fff;
+  padding: 1.4em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-top: 5em;
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .reservation-form input[type="submit"]:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px); }
+.reservation-form .full-width {
+  width: 100% !important;
+  flex-shrink: 0; }
+.reservation-form .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  @media screen and (min-width: 600px) {
+    .reservation-form .checkbox-container {
+      margin-top: 70px; } }
+  .reservation-form .checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc; }
+    .reservation-form .checkbox-container:hover input ~ .checkmark::after {
+      display: block; }
+  .reservation-form .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+    .reservation-form .checkbox-container input:checked ~ .checkmark {
+      background-color: #5DC2BA; }
+      .reservation-form .checkbox-container input:checked ~ .checkmark::after {
+        display: block; }
+  .reservation-form .checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee; }
+    .reservation-form .checkbox-container .checkmark::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
 .homepage .page-title {
   margin-top: 1.5em;
   font-size: 2.5rem;
@@ -264,7 +354,7 @@ table {
     position: relative; }
     @media screen and (min-width: 1024px) {
       .homepage .posts-list > article {
-        flex: 0 0 calc(50% - 5%);
+        flex: 0 0 calc(50% - 2em);
         margin: 0 1em 2.5%;
         display: flex; }
         .homepage .posts-list > article figure {
@@ -298,7 +388,7 @@ table {
           padding: 0.75em 1em;
           text-decoration: none;
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-          transition: 200ms ease-in-out all;
+          transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
           display: inline-block;
           font-weight: 700; }
           .homepage .posts-list > article .article-content .cta-container a:hover {
